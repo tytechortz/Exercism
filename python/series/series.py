@@ -3,10 +3,8 @@ def slices(series, length):
     results = []
     if series_length < length:
         raise ValueError('slice length too large')
-    elif length == 0:
-        raise ValueError("slice can't be 0")
-    elif length < 0:
-        raise ValueError("slice can't be negative")
+    elif length <= 0:
+        raise ValueError("slice can't be 0 or negative")
     elif series == '':
         raise Exception("can't use empty series")
     else:
