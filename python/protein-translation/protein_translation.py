@@ -18,14 +18,11 @@ def proteins(strand):
         'UGU':'Cysteine',
         'UGC':'Cysteine',
         'UGG':'Tryptophan',
-        'UAA':'STOP',
-        'UAG':'STOP',
-        'UGA':'STOP',
         }
 
     protein = []
     for codon in codons:
-        if codon == 'UAA' or codon == 'UAG' or codon == 'UGA':
+        if codon in ['UAA','UAG', 'UGA']:
             break
         else:
             protein.append(codon_protein.get(codon))
