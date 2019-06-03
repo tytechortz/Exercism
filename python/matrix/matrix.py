@@ -17,9 +17,9 @@ class Matrix(object):
     def row(self, index):
         # print(self.matrix[index-1])
         answer = []
-        for i in self.matrix[index-1].split():
+        for i in self.matrix[index-1]:
             answer.append(int(i))
-        # print(answer)
+        print(answer)
         return answer
         
 
@@ -30,4 +30,4 @@ class Matrix(object):
         print(self.matrix)
 
 m = Matrix("1 2 3\n4 5 6\n7 8 9\n18 7 6")
-# m.column(3)
+m.row(3)
