@@ -22,7 +22,7 @@ def proteins(strand):
 
     protein = []
     for codon in codons:
-        if codon in ['UAA','UAG', 'UGA']:
+        if codon in ['UAA','UAG','UGA']:
             break
         else:
             protein.append(codon_protein.get(codon))

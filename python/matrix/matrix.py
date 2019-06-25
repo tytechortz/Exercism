@@ -13,10 +13,7 @@ class Matrix(object):
             answer.append(int(i))
         return answer
         
-
     def column(self, index):
         return [row[index-1] for row in self.matrix]
 
-m = Matrix("1")
-m.row(3)
-m.column(1)
+

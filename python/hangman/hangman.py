@@ -4,17 +4,19 @@ STATUS_WIN = "win"
 STATUS_LOSE = "lose"
 STATUS_ONGOING = "ongoing"
 
-guesses = []
-alpha = list('abcdefghijklmnopqrstuvwxyz')
-word = list(input("Enter word: "))
-letters = ''
-for letter in word:
-    letters += '_' 
-print(letters)
+def hangman(word):
+    chances = 8
+    rletters = list(word)
+    board = ["_"] * len(word)
+    win = False
+    print("Welcome to Hangman")
 
-# print(pre_answer)
-
-
+while chaces is > 0:
+    msg = "Guess a letter"
+    char = input(msg)
+    if char in rletters:
+        cind = rletters \
+                .index(char)
 
 
 
