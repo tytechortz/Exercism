@@ -1,13 +1,25 @@
 def equilateral(sides):
-    return len(set(sides)) <= 1
-
+    sides.sort()
+    print(sides)
+    print(max(sides))
+    if 0 not in sides and max(sides) <= sides[0] + sides[1]:
+        print(len(set(sides)) <= 1)
+        return len(set(sides)) <= 1 
+    else:
+        return False
 
 def isosceles(sides):
-    return len(set(sides)) == 2
-
+    sides.sort()
+    if 0 not in sides and max(sides) <= sides[0] + sides[1]:
+        return len(set(sides)) <= 2
+    else:
+        return False
 
 def scalene(sides):
-    return len(set(sides)) == 3
+    sides.sort()
+    if 0 not in sides and max(sides) <= sides[0] + sides[1]:
+        return len(set(sides)) == 3
+    else:
+        return False
 
-
-# scalene([3,2,1])
+# equilateral([0,0,0])
