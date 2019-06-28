@@ -5,10 +5,13 @@ def saddle_points(matrix):
     sp = []
     rows = m.shape[0]
     cols = m.shape[1]
-    print(m)
+    print(m[1,0])
+    # print(m[:,1])
     for x in range(0, rows):
         for y in range(0, cols):
-            print(m[x,y])
+            if m[x,y] == max(m[x,:]) and m[x,y] == min(m[:,y]):
+                sp.append((x+1,y+1))
+    print(sp)
     
 
 
