@@ -5,6 +5,7 @@ def largest(min_factor, max_factor):
     palindromes = []
     num_str = []
     factors = []
+    answer = []
 
     for j in x:
         for k in x:
@@ -15,23 +16,27 @@ def largest(min_factor, max_factor):
     for number in s:
         num_str.append(str(number))
    
-    for digits in num_str:
-        # print(digits)
-        if digits[::-1] == digits:
-            palindromes.append(digits)
-    # print(palindromes)
-    largest_palindrome = int(palindromes[-1])
-    # print(largest_palindrome)
-    for m in range(1, largest_palindrome+1):
-        if int(largest_palindrome) % m == 0:
-            factors.append(m)
-    # print(factors)
-    answer = []
-    for n in range(int((len(factors)/2+1))):
-        answer.append([factors[n], factors[-(1+n)]])
-        # print([factors[n], factors[-(1+n)]])
-        print(largest_palindrome, answer)
-        return (largest_palindrome, answer)
+    if len(num_str) == 1:
+        return ( answer)
+    else:
+        for digits in num_str:
+
+            # print(digits)
+            if digits[::-1] == digits:
+                palindromes.append(digits)
+        # print(palindromes)
+        largest_palindrome = int(palindromes[-1])
+        # print(largest_palindrome)
+        for m in range(1, largest_palindrome+1):
+            if int(largest_palindrome) % m == 0:
+                factors.append(m)
+        # print(factors)
+    
+        for n in range(int((len(factors)/2+1))):
+            answer.append([factors[n], factors[-(1+n)]])
+            # print([factors[n], factors[-(1+n)]])
+            print(largest_palindrome, answer)
+            return (largest_palindrome, answer)
 
 
 def smallest(min_factor, max_factor):
@@ -51,7 +56,7 @@ def smallest(min_factor, max_factor):
         num_str.append(str(number))
    
     for digits in num_str:
-        # print(digits)
+        print(digits)
         if digits[::-1] == digits:
             palindromes.append(digits)
     # print(palindromes)
@@ -94,5 +99,5 @@ def smallest(min_factor, max_factor):
 #             print(m)
             
 
-largest(10,99)
-smallest(10,99)
+largest(15,20)
+smallest(1001,1001)

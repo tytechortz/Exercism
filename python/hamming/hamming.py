@@ -5,7 +5,6 @@ def distance(strand_a, strand_b):
         for x in range(len(strand_a)):
             if strand_a[x] == strand_b[x]:
                 hamming -= 1
-        print(hamming)
         return hamming
 
     else:
@@ -13,4 +12,3 @@ def distance(strand_a, strand_b):
     
 
 
-# distance("GO", "T")
