@@ -1,7 +1,7 @@
 def sum_recursive(current_number, accumulated_sum):
     # Base case
     # Return the final state
-    if current_number == 11:
+    if current_number == 20:
         return accumulated_sum
 
     # Recursive case
