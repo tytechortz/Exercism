@@ -5,5 +5,5 @@ def get_fib(position):
 
 # Test cases
 print(get_fib(9))
-print(get_fib(10))
+print(get_fib(20))
 print(get_fib(0))
