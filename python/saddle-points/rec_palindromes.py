@@ -1,4 +1,4 @@
-def isPalindrome(word):
+def is_palindrome(word):
     if len(word) <= 1:
         return True
 
@@ -6,6 +6,6 @@ def isPalindrome(word):
         return False
 
     
-    return isPalindrome(word[1:-1])
+    return is_palindrome(word[1:-1])
 
-print(isPalindrome('noon'))
+print(is_palindrome('noon'))
