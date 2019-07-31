@@ -6,6 +6,7 @@ def is_palindrome(word):
         return False
 
     else:
+        print(word)
         return is_palindrome(word[1:-1])
 
-print(is_palindrome('abcdefgfedcb'))
+print(is_palindrome('abcdefgfedcba'))
