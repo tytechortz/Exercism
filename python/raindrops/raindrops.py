@@ -6,7 +6,7 @@ def convert(number):
         if number % i == 0:
             factors.append(i)
 
-    print(factors)
+    # print(factors)
     check = any(item in factors for item in listOfFactors)
 
     if check is True:
@@ -20,8 +20,10 @@ def convert(number):
         
         seperator = ''
         print(seperator.join(drops))
+        return seperator.join(drops)
     else:
         print(number)
+        return str(number)
 
 
-convert(105)
+convert(52)
