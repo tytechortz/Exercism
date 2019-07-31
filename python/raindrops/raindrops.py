@@ -1,5 +1,8 @@
 def convert(number):
-    pass
+    for i in range(1, number + 1):
+        if number % i == 0:
+            print(i)
 
 
-convert(3)
+
+convert(15)
