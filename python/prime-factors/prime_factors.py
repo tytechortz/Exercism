@@ -13,4 +13,4 @@ def factors(value):
 
 
 
-factors(60)
+factors(2)
