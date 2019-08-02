@@ -3,12 +3,17 @@ def factors(value):
     i = 2
     x = value
 
-    while value % i != 1:
-        if x % i == 0:
-            p_factors.append(i)
-            x = x / i
-        else:
-            i += 1
+    if value == 2:
+        p_factors.append(2)
+    
+    else:
+
+        while value % i != 1:
+            if x % i == 0:
+                p_factors.append(i)
+                x = x / i
+            else:
+                i += 1
     print(p_factors)
 
 
