@@ -1,21 +1,16 @@
 def factors(value):
-    factors = []
-    divisors = []
+    p_factors = []
     i = 2
-    for x in range(i,value//2+1):
-        if value % x == 0:
-            factors.append(x)
+    x = value
+
+    while value % i != 1:
+        if x % i == 0:
+            p_factors.append(i)
+            x = x / i
+        else:
+            i += 1
+    print(p_factors)
 
 
-    print(factors)
-    # for x in range(i,int(value/2+1)):
-    #     if value % x == 0:
-    #         factors.append(x)
-    #         if value/x % x == 0:
-    #             factors .append(x)
-    #     # else:
-    #     #     i += 1
-    # print(factors)
-    
 
 factors(60)
