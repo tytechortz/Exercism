@@ -1,5 +1,4 @@
 def convert(number):
-    
     listOfFactors = [3,5,7]
     drops = []
 
