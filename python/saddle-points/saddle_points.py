@@ -2,6 +2,7 @@ import numpy as np
 
 def saddle_points(matrix):
     saddle_points = []
+
     matrix = np.asarray(matrix)
     print(len(matrix))
     print(matrix.shape)
@@ -12,8 +13,11 @@ def saddle_points(matrix):
     for x in range(len(matrix)):
         for y in range(matrix.shape[1]):
             if matrix[x][y] >= max(matrix[x]) and matrix[x][y] == min(matrix[:,y]):
-                saddle_points.append([x,y])
+                saddle_points.append({"row": x+1, "column": y+1})
     print(saddle_points)
+
+    # for points in saddle_points:
+
 
 
 
@@ -25,4 +29,4 @@ def saddle_points(matrix):
     # for element in range(len(matrix.shape[1])):
     #     if element >= matrix
         
-saddle_points([[9, 8, 7], [5, 3, 2]])
+saddle_points([[9, 8, 7], [5, 3, 2], [6, 6, 7]])
