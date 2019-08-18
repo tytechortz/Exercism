@@ -14,4 +14,3 @@ def factors(value):
     
     return p_factors
 
-print(factors(1))

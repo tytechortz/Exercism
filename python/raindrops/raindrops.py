@@ -1,19 +1,14 @@
 def convert(number):
     
-    listOfFactors = [3,5,7]
+    factors = {3:"Pling",5:"Plang",7:"Plong"}
     drops = []
 
-    for i in listOfFactors:
+    for i in factors:
         if number % i == 0:
-            if i == 3:
-                drops.append("Pling")
-            elif i == 5:
-                drops.append("Plang")
-            elif i == 7:
-                drops.append("Plong")
-        
-    if len(drops) == 0:
-        return number
+            drops.append(factors.get(i))
+   
+    if not drops:
+        return str(number)
     else:
         separator = ''
         return separator.join(drops)
