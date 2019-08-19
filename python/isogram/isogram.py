@@ -1,5 +1,6 @@
 def is_isogram(string):
-    pass
+    string = string.lower()
+    return string
 
 
-is_isogram("isogram")
+print(is_isogram("Isogram"))
