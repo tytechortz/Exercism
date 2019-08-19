@@ -6,8 +6,10 @@ def is_isogram(string):
     for i in remove_chars:
         string = string.replace(i, '')
     string_list = [char for char in string]
-    
-    return string_list
+
+    if len(set(string_list)) == len(string):
+        return True
+    else:
+        return False
 
 
-print(is_isogram("Emily-Jung Schwartzkopf"))
