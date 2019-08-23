@@ -1,5 +1,3 @@
-import re
-
 def is_isogram(string):
     string = string.lower()
     remove_chars = ' -'
