@@ -1,8 +1,8 @@
-def score(dice, category):
-    return category(dice) 
+def score(dice):
+    return dice.count(2) 
    
 
 
 
 
-score([2, 3, 4, 5, 6], TWOS)
+print(score([2, 3, 4, 5, 6]))
